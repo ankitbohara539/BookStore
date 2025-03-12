@@ -1,0 +1,48 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center h-full mt-6">
+        <div class="absolute inset-0"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Our Bookstore</h1>
+            <p class="text-lg mb-6">Discover amazing books, learn new things, and enjoy reading!</p>
+            <a href="#books" class="px-8 py-3 bg-green-600 text-white text-lg font-medium rounded-full hover:bg-green-700 transition-all">Browse Books</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20" id="features">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-white-800 mb-12">Why Choose Us?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <i class="fas fa-book text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-3">Wide Collection</h3>
+                    <p class="text-gray-600">Browse through a vast collection of books from different genres and authors.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <i class="fas fa-truck text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-3">Fast Delivery</h3>
+                    <p class="text-gray-600">Get your books delivered to your doorstep in no time.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <i class="fas fa-user-friends text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-black mb-3">Customer Support</h3>
+                    <p class="text-gray-600">Our dedicated support team is available 24/7 to assist you with your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-green-600 text-white py-16 text-center" id="cta">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-semibold mb-4">Ready to Start Reading?</h2>
+            <p class="text-lg mb-6">Browse our collection and find your next great read!</p>
+            <a href="#books" class="px-8 py-3 bg-white text-green-600 text-lg font-medium rounded-full hover:bg-gray-100 transition-all">Browse Books</a>
+        </div>
+    </section>
+{% endblock %}

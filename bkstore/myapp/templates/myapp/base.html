@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Home</title>
+
+    <!-- Link to Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #2d2d2d; /* Dark gray background */
+            background-image: url('https://www.transparenttextures.com/patterns/noisy.png');
+            font-family: 'Roboto', sans-serif; /* Apply the Google font */
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col text-gray-200">
+
+    <nav class="w-full p-4 bg-gray-800 bg-opacity-80 backdrop-blur-md shadow-lg flex flex-wrap justify-between items-center px-6 rounded-lg mt-4 mx-auto max-w-6xl">
+        <a href="{% url 'landing' %}" class="text-lg font-semibold px-6 py-2 rounded-lg transition-all duration-300 bg-gray-700 text-white hover:bg-gray-900 hover:scale-105">
+            <i class="fas fa-book"></i> Book<span style="color: goldenrod;;">STORE</span><sup>NP</sup>
+        </a>
+
+        <div class="flex flex-wrap gap-4 mt-2 md:mt-0">
+            <a href="{% url 'book_create' %}" class="px-6 py-2 rounded-lg bg-gray-600 text-white shadow-md hover:bg-gray-800 hover:scale-105 transition-all">
+                <i class="fas fa-plus-circle"></i> Add Book
+            </a>
+
+            <a href="{% url 'book_list' %}" class="px-6 py-2 rounded-lg bg-gray-600 text-white shadow-md hover:bg-gray-800 hover:scale-105 transition-all">
+                <i class="fas fa-book"></i> Books
+            </a>
+
+            <a href="#" class="px-6 py-2 rounded-lg bg-gray-600 text-white shadow-md hover:bg-gray-800 hover:scale-105 transition-all">
+                <i class="fas fa-info-circle"></i> About
+            </a>
+
+            <a href="#" class="px-6 py-2 rounded-lg bg-gray-600 text-white shadow-md hover:bg-gray-800 hover:scale-105 transition-all">
+                <i class="fas fa-envelope"></i> Contact
+            </a>
+        </div>
+    </nav>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+        <div class="w-full max-w-6xl mx-auto flex justify-between items-center px-6">
+            <p>&copy; 2025 Bookstore<sup>NP</sup>. All Rights Reserved.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-gray-400">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-white hover:text-gray-400">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white hover:text-gray-400">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white hover:text-gray-400">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
